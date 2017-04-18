@@ -1,2 +1,14 @@
 ---
-# tasks file for avahi
+- name: Update apt cache # apt-get update
+  apt:
+    update_cache: yes
+
+- name: Install required packages
+  apt:
+    name: avahi-utils
+    install_recommends: yes
+
+- name: Start avahi service
+  service:
+    name: avahi-daemon
+    state: started
