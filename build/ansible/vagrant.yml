@@ -1,4 +1,8 @@
+---
 - hosts: localhost
   connection: local
+  sudo: yes
+
   roles:
-    - bennojoy.redis
+    - php71
+    - nginx

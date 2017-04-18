@@ -1,0 +1,19 @@
+---
+- name: Add repository
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+    state: present
+
+- name: Update apt cache # apt-get update
+  apt:
+    update_cache: yes
+
+- name: Install required packages for PHP # apt-get install php7.1 -y
+  apt:
+    name: php7.1
+    install_recommends: yes
+
+- name: Install required packages for FPM # apt-get install php7.1 -y
+  apt:
+    name: php7.1-fpm
+    install_recommends: yes

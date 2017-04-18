@@ -3,11 +3,11 @@ Vagrant.configure("2") do |config|
 
 	config.vm.box = "ubuntu/xenial64"
 	config.vm.provider :virtualbox do |v|
-		v.memory = 2048
-		v.cpus = 2
+		v.memory = 1024
+		v.cpus = 1
 	end
 
-	project_name = "arkanoid"
+	project_name = "test"
 	project_root = "/vagrant"
 
 	config.vm.network "private_network", type: "dhcp"
