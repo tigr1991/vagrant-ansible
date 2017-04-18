@@ -4,5 +4,5 @@
   sudo: yes
 
   roles:
-    - nginx
-    - php71
+    - tigr1991.nginx
+    - tigr1991.php71
